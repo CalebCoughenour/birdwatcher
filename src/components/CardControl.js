@@ -1,6 +1,6 @@
 import React from "react";
 
-class TicketControl extends React.Component {
+class CardControl extends React.Component {
   constructor(props) {
     super(props);
     this.state = {
@@ -36,4 +36,4 @@ class TicketControl extends React.Component {
   }
 }
 
-export default TicketControl;
+export default CardControl;

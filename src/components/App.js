@@ -1,13 +1,13 @@
 import React from "react";
 import Header from "./Header"
-import TicketControl from "./TicketControl"
+import CardControl from "./CardControl"
 
 
 function App() {
   return (
     <React.Fragment>
       <Header />
-      <TicketControl />
+      <CardControl />
     </React.Fragment>
   )
 }
