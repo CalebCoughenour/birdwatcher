@@ -6,7 +6,7 @@ function NewBirdForm(props) {
 
   function handleNewBirdSubmission(event) {
     event.preventDefault();
-    props.onNewTicketCreation({species: event.target.species.value, date: event.target.date.value, location: event.target.location.value, id: v4()});
+    props.onNewBirdCreation({species: event.target.species.value, date: event.target.date.value, location: event.target.location.value, id: v4()});
   }
 
   return (
@@ -30,3 +30,9 @@ function NewBirdForm(props) {
     </React.Fragment>
   )
 }
+
+NewBirdForm.propTypes = {
+  onNewBirdCreation: PropTypes.func
+};
+
+export default NewBirdForm;
