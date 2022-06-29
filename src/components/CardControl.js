@@ -1,4 +1,7 @@
 import React from "react";
+import NewBirdForm from './NewBirdForm';
+import BirdList from './BirdList';
+
 
 class CardControl extends React.Component {
   constructor(props) {
@@ -11,7 +14,7 @@ class CardControl extends React.Component {
 
   handleClick = () => {
     this.setState(prevState => ({
-      formVisibleOnPage: !prevState.forVisibleOnPage
+      formVisibleOnPage: !prevState.formVisibleOnPage
     }));
   }
 
@@ -26,7 +29,13 @@ class CardControl extends React.Component {
   render() {
     let currentlyVisibleState = null;
     let buttonText = null;
-    
+    if(this.state.formVisibleOnPage) {
+      currentlyVisibleState = <NewBirdForm onNewBirdCreation={this.handleAddingNewBirdsToList} />;
+      buttonText = "Back To List";
+    } else {
+      currentlyVisibleState = <BirdList birdList={this.state.mainBirdList} />
+      buttonText = "Add New Bird"
+    }
     return (
       <React.Fragment>
         {currentlyVisibleState}

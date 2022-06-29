@@ -5,6 +5,7 @@ import PropTypes from "prop-types";
 function BirdList(props) {
   return (
     <React.Fragment>
+      <hr />
       {props.birdList.map((bird, index) =>
         <Bird
           location={bird.location}

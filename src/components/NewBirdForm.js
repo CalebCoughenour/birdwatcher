@@ -26,6 +26,7 @@ function NewBirdForm(props) {
           name='location'
           placeholder='Location Spotted'
         />
+        <button type='submit'>Enter</button>
       </form>    
     </React.Fragment>
   )
